@@ -1,0 +1,67 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900", rel="stylesheet")
+        block title
+    body
+
+        aside.p-sidebar
+            a(href="/").p-sidebar__title
+                .icon-logo.p-sidebar__logo
+                .p-sidebar__caption Smart
+            .p-sidebar__user
+                .user
+                    .user__avatar(style="background-image: url(https://images5.alphacoders.com/640/thumb-350-640575.jpg)")
+                    .user__info
+                        .user__name Ononto Jolil
+                        .user__descr Jolilput, Mars
+
+
+            .p-sidebar__menu 
+                ul.b-menu.b-menu_style_vertical.b-menu_type_with_icons
+                    li.b-menu__item.active
+                        a.b-menu__link(href="#") 
+                            span.b-menu__icon.icon-home
+                            span.b-menu__text Dashboard
+
+                    li.b-menu__item
+                        a.b-menu__link(href="#") 
+                            span.b-menu__icon.icon-messages
+                            span.b-menu__text Messages
+                        .b-badge.b-menu__badge 32
+
+                    li.b-menu__item
+                        a.b-menu__link(href="#") 
+                            span.b-menu__icon.icon-elements
+                            span.b-menu__text UI Elements
+
+                    li.b-menu__item
+                        a.b-menu__link(href="#") 
+                            span.b-menu__icon.icon-charts
+                            span.b-menu__text Charts
+
+                    li.b-menu__item
+                        a.b-menu__link(href="#") 
+                            span.b-menu__icon.icon-calendar
+                            span.b-menu__text Calendar
+
+        .main-container
+            header.p-header
+                .p-header__block
+                    a(href="#", data-toggle-sidebar).p-header__item
+                        .triangle.p-header__triangle
+                        .icon-burger
+                    a(href="#").p-header__item 
+                        .icon-search
+                .p-header__block
+                    a(href="#").p-header__item 
+                        .icon-settings
+                    a(href="#").p-header__item 
+                        .icon-logout
+
+            .p-content
+                block content
+

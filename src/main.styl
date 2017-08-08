@@ -1,0 +1,290 @@
+* 
+    box-sizing: border-box
+
+@font-face {
+  font-family: 'Lobster';
+  src: url('assets/fonts/Lobster13.eot?37466915');
+  src: url('assets/fonts/Lobster13.eot?37466915#iefix') format('embedded-opentype'),
+       url('assets/fonts/Lobster13.woff2?37466915') format('woff2'),
+       url('assets/fonts/Lobster13.woff?37466915') format('woff'),
+       url('assets/fonts/Lobster13.ttf?37466915') format('truetype');
+       url('assets/fonts/Lobster13.svg?37466915#Lobster13') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'smart';
+  src: url('assets/fonts/smart.eot?37466915');
+  src: url('assets/fonts/smart.eot?37466915#iefix') format('embedded-opentype'),
+       url('assets/fonts/smart.woff2?37466915') format('woff2'),
+       url('assets/fonts/smart.woff?37466915') format('woff'),
+       url('assets/fonts/smart.ttf?37466915') format('truetype');
+       url('assets/fonts/smart.svg?37466915#smart') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'smart';
+    src: url('assets/fonts/smart.svg?37466915#smart') format('svg');
+  }
+  @font-face {
+    font-family: 'Lobster';
+    src: url('assets/fonts/Lobster13.svg?37466915#Lobster') format('svg');
+  }
+}
+
+ 
+[class^="icon-"]:before, [class*=" icon-"]:before 
+    font-family "smart"
+    font-style normal
+    font-weight normal
+    speak none
+    display inline-block
+    text-decoration inherit
+    width 1em
+    text-align center
+    font-variant normal
+    text-transform none
+    line-height 1em
+    vertical-align top
+
+ 
+.icon-box:before { content: '\e800'; } /* '' */
+.icon-burger:before { content: '\e801'; width: 1.3em } /* '' */
+.icon-calendar:before { content: '\e802'; } /* '' */
+.icon-charts:before { content: '\e803'; } /* '' */
+.icon-document:before { content: '\e804'; } /* '' */
+.icon-elements:before { content: '\e805'; } /* '' */
+.icon-home:before { content: '\e806'; } /* '' */
+.icon-logo:before { content: '\e807'; } /* '' */
+.icon-logout:before { content: '\e808'; } /* '' */
+.icon-messages:before { content: '\e809'; } /* '' */
+.icon-money:before { content: '\e80a'; } /* '' */
+.icon-refresh:before { content: '\e80b'; } /* '' */
+.icon-search:before { content: '\e80c'; } /* '' */
+.icon-settings:before { content: '\e80d'; } /* '' */
+.icon-smile:before { content: '\e80e'; } /* '' */
+.icon-smile-angry:before { content: '\e80f'; } /* '' */
+.icon-smile-happy:before { content: '\e810'; } /* '' */
+.icon-smile-sad:before { content: '\e811'; } /* '' */
+.icon-base:before { content: '\e812'; } /* '' */
+
+.triangle
+    border 5px solid transparent;
+    border-right 7px solid #00bfe8
+
+
+html
+    overflow-x: hidden
+
+
+body, html, p
+    padding 0
+    margin 0
+
+body
+    background-color #eceef2
+    font-family 'Lato', sans-serif
+    font-size 16px
+    font-weight 400
+    
+        
+.p-header   
+    height 80px
+    width 100%
+    z-index 2
+    top 0
+    background-color #fff
+    display grid
+    grid-template-columns 1fr 1fr
+    padding 30px
+    &__triangle
+        float left
+        margin 3px 4px 0 0
+    &__block
+        display inline-grid
+        grid-template-columns 40px 30px 30px 30px 30px 30px 30px 30px 
+        grid-column-gap 35px
+        &:first-child
+            grid-column 1
+        &:last-child
+            grid-column 2
+            justify-self: end
+
+    &__item
+        font-size 17px
+        color rgba(#b0bec5, .7)
+        transition color 400ms
+        &:hover
+            color rgba(#b0bec5, 1)
+
+
+    &__block:last-child &
+        &__item
+            &:nth-last-child(1)
+                grid-column 8
+            &:nth-last-child(2)
+                grid-column 7
+            &:nth-last-child(3)
+                grid-column 6
+            &:nth-last-child(4)
+                grid-column 5
+            &:nth-last-child(5)
+                grid-column 4
+
+
+            
+    
+.user
+    padding 40px 35px
+    color #fff
+    &:after
+        content ''
+        display table
+        clear both
+    &__avatar
+        width 63px
+        height 63px
+        background-color #fff
+        background-position center center
+        background-size cover
+        border-radius 50%
+        float left
+    &__info
+        padding 8px 0 9px
+        margin-left 81px
+    &__name
+        font-weight 300
+        font-size 24px
+    &__descr
+        color #b0bec5
+        font-size 14px
+
+.b-badge
+    background-color #00bfe8
+    border-radius 10px
+    font-size 12px
+    padding 1px 10px
+    color #fff
+    line-height 17px
+    display inline-block
+    
+.b-menu
+    list-style none
+    padding-left 0
+    margin 0
+    &__item
+        position relative
+        &:hover
+            background-color rgba(#2a3344, .7)
+        &.active
+            background-color #2a3344
+            &:before
+                content ''
+                position absolute
+                left 0
+                top 0
+                width 4px
+                height 53px
+                background-color #00bfe8
+
+    &__link
+        color: #b0bec5
+        font-size: 16px
+        line-height: 17px
+        display block
+        text-decoration none
+        padding 18px 36px
+    &__badge
+        position absolute
+        right 30px
+        top 17px
+    &__icon
+        float left
+        height 20px
+        width 20px
+        margin-right 15px
+        color #b0bec5
+        vertical-align middle
+        text-align center
+
+
+.p-header, .p-sidebar__title
+    box-shadow 1px 1.7px 2px rgba(4, 4, 4, 0.09)
+
+.p-sidebar
+    left 0
+    top 0
+    width 315px
+    height 100vh
+    position fixed
+    z-index 5
+    background-color #2f3b4c
+    transform translateX(-315px)
+    transition transform 550ms
+    &__title
+        width 100%
+        height 80px
+        background-color #00bfe8
+        color: rgba(#2f3b4c, .5)
+        padding 21px 35px
+        font-size 34px
+        display block
+        text-decoration none
+        opacity .9
+        transition opacity 400ms
+        &:hover
+            opacity 1
+    &__logo
+        margin-right 8px
+
+    &__logo, &__caption
+        display inline-block
+        
+    &__caption
+        font-family: "Lobster";
+        font-weight: 400
+        line-height 1em
+        vertical-align top
+
+.p-content
+    padding 30px
+
+.main-container
+    
+    transition padding-left 550ms
+
+
+body
+    &.show-sidebar
+        .p-sidebar 
+            transform translateX(0px)
+        .main-container
+            padding-left 315px            
+
+.bg-red
+    background-color #ff8761
+
+.bg-blue
+    background-color #57bdde
+
+.bg-purple
+    background-color #b198dc
+
+.bg-green
+    background-color #6dc7be
+
+.c-red
+    color #ff8761
+
+.c-blue
+    color #57bdde
+
+.c-purple
+    color #b198dc
+
+.c-green
+    color #6dc7be
