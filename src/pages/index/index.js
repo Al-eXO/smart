@@ -10,3 +10,10 @@ $(function() {
     });
 
 })
+
+window.onload = function() {
+    setTimeout(() => {
+        $('#hideAll').fadeOut("slow");
+        $('body').addClass("page-loaded");
+    }, 150);
+}

@@ -1,7 +1,34 @@
+.page-loaded
+    .widget
+        animation-name showWidget 
+        animation-duration 550ms
+        animation-fill-mode forwards
+    .widgets-layout
+        &__item
+            &_1
+                animation-delay: 200ms
+            &_2
+                animation-delay: 300ms
+            &_3
+                animation-delay: 400ms
+            &_4
+                animation-delay: 500ms
+            &_5
+                animation-delay: 600ms
+            &_6
+                animation-delay: 700ms
+            &_7
+                animation-delay: 800ms
+            &_8
+                animation-delay: 900ms
+            &_9
+                animation-delay: 1000ms
+            &_10
+                animation-delay: 1100ms    
 .widgets-layout
     display grid
     grid-template-columns auto auto auto auto
-    grid-template-rows 95px 203px 203px 400px 270px
+    grid-template-rows 95px 290px 290px 400px 270px
     grid-column-gap 20px
     grid-row-gap 20px
     justify-items stretch
@@ -47,12 +74,11 @@
     display inline-grid
     grid-template-columns 70px auto
     grid-column-gap 20px
+    grid-template-areas: "full full"
     align-items center
     opacity 0
     transform translatyY(25px)
-    animation-name showWidget 
-    animation-duration 550ms
-    animation-fill-mode forwards
+    
     &__label
         grid-column 1
         height 100%
