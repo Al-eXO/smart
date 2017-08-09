@@ -58,7 +58,8 @@ const common = merge([{
     images(),
     fonts.loadFonts({
         options: {
-            name: '[name].[ext]'
+            name: '[name].[ext]',
+            outputPath: 'assets/fonts/'
         },
     }),
 ]);
